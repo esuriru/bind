@@ -6,3 +6,4 @@ set(CMAKE_CXX_STANDARD 20)
 project(bind LANGUAGES C CXX)
 
 add_subdirectory(bind)
+add_subdirectory(examples)

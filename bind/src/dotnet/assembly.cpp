@@ -19,6 +19,8 @@ namespace bind::dotnet
         }
     }
 
+    assembly::~assembly() = default;
+
     bool assembly::is_valid() const
     {
         return valid;
