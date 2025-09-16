@@ -36,9 +36,11 @@ namespace bind::core
         return *this;
     }
 
-    app& app::load_assembly(const std::filesystem::path& path)
+    app& app::load_assembly(
+        const std::filesystem::path& path, dotnet::assembly*& assembly)
     {
-        assembly = new dotnet::assembly(*hostfxr_ctx, path);
+        this->assembly = new dotnet::assembly(*hostfxr_ctx, path);
+        assembly = this->assembly;
         return *this;
     }
 }
