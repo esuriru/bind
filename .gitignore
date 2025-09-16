@@ -1,1 +1,7 @@
 build/
+
+# Generic cache folder
+.cache/
+
+# VSCode directory
+.vscode/
