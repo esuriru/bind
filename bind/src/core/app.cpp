@@ -21,6 +21,19 @@ namespace bind::core
     {
         hostfxr_ctx->cleanup();
         delete hostfxr_ctx;
+
+        if (assembly)
+        {
+            delete assembly;
+        }
+    }
+
+    // TODO - Take in a func ptr for handling errors
+    app& app::run_hostfxr(const std::filesystem::path& config_path)
+    {
+        hostfxr_ctx->run(config_path);
+
+        return *this;
     }
 
     app& app::load_assembly(const std::filesystem::path& path)

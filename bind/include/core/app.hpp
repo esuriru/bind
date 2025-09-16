@@ -11,6 +11,9 @@ namespace bind::core
         app();
         ~app();
 
+        app& run_hostfxr(const std::filesystem::path& config_path);
+
+        // To be called after `run_hostfxr`
         [[__maybe_unused__]]
         app& load_assembly(const std::filesystem::path& path);
 
