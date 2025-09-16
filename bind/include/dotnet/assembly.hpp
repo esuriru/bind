@@ -11,8 +11,13 @@ namespace bind::dotnet
         ~assembly();
 
         bool is_valid() const;
+
+        void call_func(const std::wstring& type_name, 
+            const std::wstring& func_name);
     
     private:
+        std::wstring name;
+        hostfxr_ctx& ctx;
         bool valid;
     };
 }
