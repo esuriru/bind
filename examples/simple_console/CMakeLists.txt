@@ -14,3 +14,13 @@ add_custom_command(
         "$<TARGET_FILE_DIR:simple_console>"
     COMMAND_EXPAND_LISTS
 )
+
+# Copy managed build
+add_custom_command(
+    TARGET simple_console 
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_LIST_DIR}/managed/bin" 
+        "$<TARGET_FILE_DIR:simple_console>"
+    COMMAND_EXPAND_LISTS
+)
