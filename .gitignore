@@ -5,3 +5,6 @@ build/
 
 # VSCode directory
 .vscode/
+
+obj/
+bin/
