@@ -103,6 +103,14 @@ namespace bind::dotnet
             return -1;
         }
 
+        result = get_delegate_func(handle,
+            hdt_get_function_pointer,
+            reinterpret_cast<void**>(&get_func_ptr_func));
+        if (result != 0)
+        {
+            return -1;
+        }
+
         return 0;
     }
 
