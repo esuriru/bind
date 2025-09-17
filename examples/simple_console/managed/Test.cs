@@ -9,6 +9,7 @@ namespace SimpleConsole
         public static void Write()
         {
             Console.WriteLine("Called from Native");
+            throw new System.ArgumentException();
         }
     }
 }
